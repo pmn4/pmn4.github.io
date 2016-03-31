@@ -1,19 +1,39 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Patrick NEwell
-email: patrick@pmnewell.com
-description: > # this means to ignore newlines until "baseurl:"
-  a place for stuff
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.pmnewell.com" # the base hostname & protocol for your site
-twitter_username: pnewell4
-github_username:  pmn4
+title: Patrick Newell
+description: 'a place for stuff'
+url: 'http://www.pmnewell.com'
+baseurl: ''
+google_analytics: 'UA-45875189-1'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Pat Newell'
+  email: patrick@pmnewell.com
+  twitter_username: pnewell4
+  facebook_username: pmnewell
+  github_username:  pmn4
+  linkedin_username:  pmnewell
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
 # Build settings
+destination: _site
+paginate: 10
+permalink: /:title/
 markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
