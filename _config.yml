@@ -1,0 +1,19 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Patrick NEwell
+email: patrick@pmnewell.com
+description: > # this means to ignore newlines until "baseurl:"
+  a place for stuff
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.pmnewell.com" # the base hostname & protocol for your site
+twitter_username: pnewell4
+github_username:  pmn4
+
+# Build settings
+markdown: kramdown
