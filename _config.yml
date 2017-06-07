@@ -1,14 +1,14 @@
 # Site settings
 title: Patrick Newell
-description: 'a place for stuff'
-url: 'http://www.pmnewell.com'
+description: ''
+url: 'https://pmnewell.com'
 baseurl: ''
 google_analytics: 'UA-45875189-1'
 # disqus_shortname: 'your-disqus-name'
 
 author:
   name: 'Pat Newell'
-  email: patrick@pmnewell.com
+  email: jestersded@gmail.com
   twitter_username: pnewell4
   facebook_username: pmnewell
   github_username:  pmn4
