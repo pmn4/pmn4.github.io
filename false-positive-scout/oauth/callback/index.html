@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex">
     <title>Returning to False Positive Scout</title>
     <style>
         body {
@@ -10,19 +12,51 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
             background-color: #f5f5f7;
         }
-        .message {
+        .container {
             text-align: center;
             color: #1d1d1f;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+        a {
+            display: inline-block;
+            margin: 1em 0;
+            padding: 0.75em 1.5em;
+            background-color: #007aff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .note {
+            font-size: 0.875em;
+            color: #86868b;
+            margin-top: 1em;
         }
     </style>
 </head>
 <body>
-    <div class="message">
+    <div class="container">
         <h1>Returning to False Positive Scout…</h1>
+        <a href="#" id="fallback-link">Open False Positive Scout</a>
+        <p class="note">If nothing happens, open this on the iPhone that has False Positive Scout installed.</p>
     </div>
+    <script>
+        (function() {
+            var params = window.location.search + window.location.hash;
+            var targetUrl = 'scout://oauth/callback' + params;
+            document.getElementById('fallback-link').href = targetUrl;
+            window.location.replace(targetUrl);
+        })();
+    </script>
 </body>
 </html>
